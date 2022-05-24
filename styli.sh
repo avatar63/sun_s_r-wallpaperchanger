@@ -31,35 +31,30 @@ echo $TIMINGS
 
 SUNRISE=$(head -1 file.txt)
 SUNSET=$(tail -1 file.txt)
-echo $SUNRISE
-echo $SUNSET
-
-
-
-
-
 
 FILE=$(($RANDOM%3))
-echo $FILE
-SUNS=~/scripts/wp$FILE/sunset.jpg
-SUNR=~/scripts/wp$FILE/sunrise.jpg
+mkdir ~/Wallpaper_Cngr
+cd ~/Wallpaper_Cngr
+mkdir wp0 wp1 wp2
+
+SUNS=~/Wallpaper_Cngr/wp$FILE/sunset.jpg
+SUNR=~/Wallpaper_Cngr/wp$FILE/sunrise.jpg
 echo $SUNS
 echo $SUNR
 
 rm json?lat=36.7201600
-
 
 if [ $DN == 'AM' ]
 then
 	echo "AM"
 	if [ $SUNRISE == $TIME ]
 	then
-		gsettings set org.gnome.desktop.background picture-uri #SUNRISE PICS
+		gsettings set org.gnome.desktop.background picture-uri file://$SUNR
 	fi
 elif [ $DN == "PM" ]
 then
 	echo "PM"
-	if [ $SUNRISE  == $TIME ]
+	if [ $SUNSET  == $TIME ]
 	then
 		echo "It's Sunset time."
 		gsettings set org.gnome.desktop.background picture-uri file://$SUNS
