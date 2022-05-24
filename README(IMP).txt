@@ -4,4 +4,7 @@ In order to do make the above easier for users, users will have to run the scrip
 Thanks for using this dumbass program. 
 I hope it makes me a sugar daddy thanks <3
 
+note- run sty.sh before styli.sh
+awesome! have fun!
+
 My Patreon: (.Y.)
