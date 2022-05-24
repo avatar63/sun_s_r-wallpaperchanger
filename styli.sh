@@ -59,7 +59,7 @@ then
 elif [ $DN == "PM" ]
 then
 	echo "PM"
-	if [ $TIME  == $TIME ]
+	if [ $SUNRISE  == $TIME ]
 	then
 		echo "It's Sunset time."
 		gsettings set org.gnome.desktop.background picture-uri file://$SUNS
