@@ -63,7 +63,7 @@ then
 	if [ "$SUNSET"=="$TIME" ]
 	then
 		echo "It's Sunset time."
-		gsettings set org.gnome.desktop.background picture-uri file:///home/dhruvgarg/.local/share/backgrounds/sunrise.jpg
+		gsettings set org.gnome.desktop.background picture-uri $SUNS
 
 	fi
 fi
